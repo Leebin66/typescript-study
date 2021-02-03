@@ -4,8 +4,8 @@ let num: number | undefined | null = 123
 let str: string = 'abc'
 
 // 数组
-let arr1: number[] = [1, 2 ,3]
-let arr2: Array<number | string> = [1, 2, 3, '4']
+let arr1: number[] = [1, 2 ,3] // number 类型的成员 组成一个数组
+let arr2: Array<number | string> = [1, 2, 3, '4'] // 数组泛型
 
 // 元组
 let tuple: [number, string] = [0, '1']
