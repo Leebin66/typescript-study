@@ -1,11 +1,25 @@
 // 原始类型
 let bool: boolean = true
-let num: number | undefined | null = 123
+let num: number | undefined | null = 123 // 联合类型
 let str: string = 'abc'
 
 // 数组
 let arr1: number[] = [1, 2 ,3] // number 类型的成员 组成一个数组
 let arr2: Array<number | string> = [1, 2, 3, '4'] // 数组泛型
+
+// 泛型的概念：不预先确定的数据类型，具体的类型在使用的时候才能确定
+
+// 泛型的好处
+// 1、增强程序的可扩展性：函数或类可以很轻松地支持多种数据类型
+// 2、增强代码的可读性：不必写多条函数重载，或者冗长的联合类型声明
+// 3、灵活地控制类型之前的约束
+
+// 泛型的定义：使用 <>（尖角号）进行定义，通常使用 <T> 来作泛型的表示
+function join<T> (first: T, second: T) {
+  return `${first}${second}`
+}
+join <string> ('li', 'bin')
+join <number> (1, 2)
 
 // 元组
 let tuple: [number, string] = [0, '1']
